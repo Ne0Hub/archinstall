@@ -270,7 +270,7 @@ assert_valid_disk "$INS_DISK"
 
 set_time_through_ntp "$INS_TIME_ZONE"
 
-wipe_disk_with_random_data "$INS_DISK"
+#wipe_disk_with_random_data "$INS_DISK"
 
 create_partitions "$INS_DISK" "$INS_EFI_SIZE" "$INS_SWAP_SIZE"
 
