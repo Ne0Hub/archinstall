@@ -14,7 +14,10 @@ useradd -m -g wm -G users,wheel,storage,power,network -s /bin/bash -c "William X
 passwd boo
 
 pacman -S vim sudo --noconfirm
-visudo
+#visudo
+echo "boo ALL=(ALL) ALL" >> /etc/sudoers
+
+pacman -Syu intel-ucode --noconfirm --force
 
 mkdir -p /run/btrfs-root
 vim /etc/mkinitcpio.conf
