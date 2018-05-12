@@ -1,3 +1,8 @@
+###https://www.lisenet.com/2013/luks-add-keys-backup-and-restore-volume-header
+cryptsetup luksDump /dev/sda3
+cryptsetup luksAddKey--key-slot 1 /dev/sda3 --key-file .keyfile
+cryptsetup luksDump /dev/sda3
+cryptsetup --test-passphrase luksOpen /dev/sda3 && echo correct
 ###https://gist.github.com/gutoandreollo/e12455886149a6c85a70
 
 mkdir -p /mnt/btrfs-root
